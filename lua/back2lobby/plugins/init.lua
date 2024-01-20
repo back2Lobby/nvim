@@ -1,3 +1,2 @@
 return {
-    { "alexandersix/vim-blade" },
 }
