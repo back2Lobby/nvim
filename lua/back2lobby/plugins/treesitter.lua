@@ -4,7 +4,7 @@ return 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = { "lua", "javascript", "typescript", "tsx", "html", "rust", "c", "query", "php" },
+            ensure_installed = { "lua", "javascript", "typescript", "tsx", "html","css","javascript", "rust", "c", "query", "php" },
 
             auto_install = true,
 
