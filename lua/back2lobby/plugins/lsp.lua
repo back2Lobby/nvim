@@ -11,7 +11,7 @@ return {
             'hrsh7th/nvim-cmp',
             'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
-            "folke/neodev.nvim"
+            "folke/neodev.nvim",
         },
         config = function()
 
@@ -28,12 +28,15 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "rust_analyzer",
                     "tsserver",
+                    "rust_analyzer",
                     "tailwindcss"
                 },
                 handlers = {
                     function (server_name)
+                        if server_name == "rust_analyzer" then
+                            return
+                        end
                         require("lspconfig")[server_name].setup {
                             capabilities = capabilities
                         }
@@ -84,6 +87,11 @@ return {
         opts = {
             -- options
         },
+    },
+    {
+        "lvimuser/lsp-inlayhints.nvim",
+        event = "LspAttach",
+        config = function() require("lsp-inlayhints").setup() end
     }
 }
 
