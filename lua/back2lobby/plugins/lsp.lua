@@ -30,7 +30,8 @@ return {
                     "lua_ls",
                     "tsserver",
                     "rust_analyzer",
-                    "tailwindcss"
+                    "tailwindcss",
+                    "intelephense"
                 },
                 handlers = {
                     function (server_name)
@@ -92,6 +93,11 @@ return {
         "lvimuser/lsp-inlayhints.nvim",
         event = "LspAttach",
         config = function() require("lsp-inlayhints").setup() end
+    },
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {},
     }
 }
 
