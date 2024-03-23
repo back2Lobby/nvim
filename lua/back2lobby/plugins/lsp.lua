@@ -31,7 +31,8 @@ return {
                     "tsserver",
                     "rust_analyzer",
                     "tailwindcss",
-                    "intelephense"
+                    "intelephense",
+                    "emmet_ls",
                 },
                 handlers = {
                     function (server_name)
@@ -60,6 +61,14 @@ return {
                             }
                         }
                     end,
+                    ["emmet_ls"] = function ()
+                        local lspconfig = require("lspconfig")
+                        lspconfig.emmet_ls.setup {
+                            filetypes = {
+                                "css", "eruby", "html", "javascript", "javascriptreact", "blade", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue"
+                            }
+                        }
+                    end
 
                 }
             })
