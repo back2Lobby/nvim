@@ -33,8 +33,7 @@ return {
                     "tailwindcss",
                     "intelephense",
                     "emmet_ls",
-                    "phpstan",
-                    "vue-language-server"
+                    "volar"
                 },
                 handlers = {
                     function (server_name)
