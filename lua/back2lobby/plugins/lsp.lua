@@ -33,7 +33,8 @@ return {
                     "tailwindcss",
                     "intelephense",
                     "emmet_ls",
-                    "volar"
+                    "volar",
+                    "clangd"
                 },
                 handlers = {
                     function (server_name)
