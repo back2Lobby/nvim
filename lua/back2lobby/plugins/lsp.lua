@@ -31,7 +31,7 @@ return {
                     "tsserver",
                     "rust_analyzer",
                     "tailwindcss",
-                    "intelephense",
+                    "phpactor",
                     "emmet_ls",
                     "volar",
                     "clangd"
