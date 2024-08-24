@@ -1,6 +1,9 @@
 vim.g.guicursor = ""
 vim.g.mapleader = " "
 
+-- set intial working directory just to keep track
+vim.g.initial_cwd = vim.fn.getcwd()
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
