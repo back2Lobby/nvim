@@ -11,3 +11,5 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<CR>", "j", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<C-k>", vim.cmd.Ex, { noremap = true, silent = true })
+
+vim.keymap.set("n", "gh", vim.lsp.buf.hover, { desc = "LSP Hover", silent = true })
